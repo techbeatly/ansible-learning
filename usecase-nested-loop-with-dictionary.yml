@@ -1,3 +1,5 @@
+# Loop to get 3 protocols x 2 servertype x 2 Names&Value (12 combinations)
+# We need 12 combinations but Name and Value are pairs, hence used a dictionary
 ---
 - name: Loop to get 3 protocols x 2 servertype x 2 Names&Value (12 combinations)
   hosts: localhost
