@@ -27,7 +27,6 @@
       debug:
         msg: 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\{{item[0]}}\{{item[1]}}  -Name {{ item[2]["myname"] }} -Value {{ item.2.type.0.value }} -Type DWord'
       with_nested:
-        - '{{ protocol }}' #[ 'PCT 1.0', 'SSL 2.0', 'SSL 3.0']
+        - '{{ protocol }}'
         - '{{ srvtype }}'
         - '{{ regname }}'
-
