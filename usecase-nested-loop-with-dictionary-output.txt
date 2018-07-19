@@ -1,4 +1,4 @@
-$ ansible-playbook nestedloop.yml
+$ ansible-playbook usecase-nested-loop-with-dictionary.yml
 
 PLAY [nested] ***********************************************************************************************************
 
