@@ -30,3 +30,14 @@
         - '{{ protocol }}'
         - '{{ srvtype }}'
         - '{{ regname }}'
+        
+    - name: Update Windows Reg
+      win_regedit:
+        path: 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\{{item[0]}}\{{item[1]}}'
+        name: '{{ item[2]["myname"] }}'
+        data: '{{ item.2.type.0.value }}'
+        type: dword
+      with_nested:
+        - '{{ protocol }}'
+        - '{{ srvtype }}'
+        - '{{ regname }}'
